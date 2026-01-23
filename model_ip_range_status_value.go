@@ -38,15 +38,20 @@ func (v *IPRangeStatusValue) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := IPRangeStatusValue(value)
-	for _, existing := range AllowedIPRangeStatusValueEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid IPRangeStatusValue", value)
+	return nil
+
+	// Commented out due to failure to keep this up to date with the OpenAPI spec
+	// See: https://github.com/netbox-community/go-netbox/issues/220
+	//enumTypeValue := IPRangeStatusValue(value)
+	//for _, existing := range AllowedIPRangeStatusValueEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid IPRangeStatusValue", value)
 }
 
 // NewIPRangeStatusValueFromValue returns a pointer to a valid IPRangeStatusValue

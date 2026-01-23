@@ -64,15 +64,20 @@ func (v *ConsolePortTypeValue) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := ConsolePortTypeValue(value)
-	for _, existing := range AllowedConsolePortTypeValueEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid ConsolePortTypeValue", value)
+	return nil
+
+	// Commented out due to failure to keep this up to date with the OpenAPI spec
+	// See: https://github.com/netbox-community/go-netbox/issues/220
+	//enumTypeValue := ConsolePortTypeValue(value)
+	//for _, existing := range AllowedConsolePortTypeValueEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid ConsolePortTypeValue", value)
 }
 
 // NewConsolePortTypeValueFromValue returns a pointer to a valid ConsolePortTypeValue

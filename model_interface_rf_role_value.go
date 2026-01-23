@@ -38,15 +38,20 @@ func (v *InterfaceRfRoleValue) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := InterfaceRfRoleValue(value)
-	for _, existing := range AllowedInterfaceRfRoleValueEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid InterfaceRfRoleValue", value)
+	return nil
+
+	// Commented out due to failure to keep this up to date with the OpenAPI spec
+	// See: https://github.com/netbox-community/go-netbox/issues/220
+	//enumTypeValue := InterfaceRfRoleValue(value)
+	//for _, existing := range AllowedInterfaceRfRoleValueEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid InterfaceRfRoleValue", value)
 }
 
 // NewInterfaceRfRoleValueFromValue returns a pointer to a valid InterfaceRfRoleValue

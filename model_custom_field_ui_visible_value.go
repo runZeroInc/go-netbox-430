@@ -38,15 +38,20 @@ func (v *CustomFieldUiVisibleValue) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := CustomFieldUiVisibleValue(value)
-	for _, existing := range AllowedCustomFieldUiVisibleValueEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid CustomFieldUiVisibleValue", value)
+	return nil
+
+	// Commented out due to failure to keep this up to date with the OpenAPI spec
+	// See: https://github.com/netbox-community/go-netbox/issues/220
+	//enumTypeValue := CustomFieldUiVisibleValue(value)
+	//for _, existing := range AllowedCustomFieldUiVisibleValueEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid CustomFieldUiVisibleValue", value)
 }
 
 // NewCustomFieldUiVisibleValueFromValue returns a pointer to a valid CustomFieldUiVisibleValue

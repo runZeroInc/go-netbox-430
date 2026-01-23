@@ -23,6 +23,7 @@ const (
 	INTERFACETYPELABEL_VIRTUAL                             InterfaceTypeLabel = "Virtual"
 	INTERFACETYPELABEL_BRIDGE                              InterfaceTypeLabel = "Bridge"
 	INTERFACETYPELABEL_LINK_AGGREGATION_GROUP__LAG         InterfaceTypeLabel = "Link Aggregation Group (LAG)"
+	INTERFACETYPELABEL__100_BASE_FX__10_100_ME InterfaceTypeLabel = "100BASE-FX (10/100ME)"
 	INTERFACETYPELABEL__100_BASE_FX__10_100_ME_FIBER       InterfaceTypeLabel = "100BASE-FX (10/100ME FIBER)"
 	INTERFACETYPELABEL__100_BASE_LFX__10_100_ME_FIBER      InterfaceTypeLabel = "100BASE-LFX (10/100ME FIBER)"
 	INTERFACETYPELABEL__100_BASE_TX__10_100_ME             InterfaceTypeLabel = "100BASE-TX (10/100ME)"
@@ -158,6 +159,7 @@ var AllowedInterfaceTypeLabelEnumValues = []InterfaceTypeLabel{
 	"Virtual",
 	"Bridge",
 	"Link Aggregation Group (LAG)",
+	"100BASE-FX (10/100ME)",
 	"100BASE-FX (10/100ME FIBER)",
 	"100BASE-LFX (10/100ME FIBER)",
 	"100BASE-TX (10/100ME)",
@@ -294,15 +296,20 @@ func (v *InterfaceTypeLabel) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := InterfaceTypeLabel(value)
-	for _, existing := range AllowedInterfaceTypeLabelEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid InterfaceTypeLabel", value)
+	return nil
+
+	// Commented out due to failure to keep this up to date with the OpenAPI spec
+	// See: https://github.com/netbox-community/go-netbox/issues/220
+	//enumTypeValue := InterfaceTypeLabel(value)
+	//for _, existing := range AllowedInterfaceTypeLabelEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid InterfaceTypeLabel", value)
 }
 
 // NewInterfaceTypeLabelFromValue returns a pointer to a valid InterfaceTypeLabel

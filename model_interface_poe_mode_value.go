@@ -38,15 +38,20 @@ func (v *InterfacePoeModeValue) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := InterfacePoeModeValue(value)
-	for _, existing := range AllowedInterfacePoeModeValueEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid InterfacePoeModeValue", value)
+	return nil
+
+	// Commented out due to failure to keep this up to date with the OpenAPI spec
+	// See: https://github.com/netbox-community/go-netbox/issues/220
+	//enumTypeValue := InterfacePoeModeValue(value)
+	//for _, existing := range AllowedInterfacePoeModeValueEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid InterfacePoeModeValue", value)
 }
 
 // NewInterfacePoeModeValueFromValue returns a pointer to a valid InterfacePoeModeValue
