@@ -42,15 +42,20 @@ func (v *ClusterStatusValue) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := ClusterStatusValue(value)
-	for _, existing := range AllowedClusterStatusValueEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid ClusterStatusValue", value)
+	return nil
+
+	// Commented out due to failure to keep this up to date with the OpenAPI spec
+	// See: https://github.com/netbox-community/go-netbox/issues/220
+	//enumTypeValue := ClusterStatusValue(value)
+	//for _, existing := range AllowedClusterStatusValueEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid ClusterStatusValue", value)
 }
 
 // NewClusterStatusValueFromValue returns a pointer to a valid ClusterStatusValue

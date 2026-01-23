@@ -60,15 +60,20 @@ func (v *BriefL2VPNTypeValue) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := BriefL2VPNTypeValue(value)
-	for _, existing := range AllowedBriefL2VPNTypeValueEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid BriefL2VPNTypeValue", value)
+	return nil
+
+	// Commented out due to failure to keep this up to date with the OpenAPI spec
+	// See: https://github.com/netbox-community/go-netbox/issues/220
+	//enumTypeValue := BriefL2VPNTypeValue(value)
+	//for _, existing := range AllowedBriefL2VPNTypeValueEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid BriefL2VPNTypeValue", value)
 }
 
 // NewBriefL2VPNTypeValueFromValue returns a pointer to a valid BriefL2VPNTypeValue

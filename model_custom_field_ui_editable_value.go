@@ -38,15 +38,20 @@ func (v *CustomFieldUiEditableValue) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := CustomFieldUiEditableValue(value)
-	for _, existing := range AllowedCustomFieldUiEditableValueEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid CustomFieldUiEditableValue", value)
+	return nil
+
+	// Commented out due to failure to keep this up to date with the OpenAPI spec
+	// See: https://github.com/netbox-community/go-netbox/issues/220
+	//enumTypeValue := CustomFieldUiEditableValue(value)
+	//for _, existing := range AllowedCustomFieldUiEditableValueEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid CustomFieldUiEditableValue", value)
 }
 
 // NewCustomFieldUiEditableValueFromValue returns a pointer to a valid CustomFieldUiEditableValue

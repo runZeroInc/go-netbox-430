@@ -38,15 +38,20 @@ func (v *ObjectChangeActionValue) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := ObjectChangeActionValue(value)
-	for _, existing := range AllowedObjectChangeActionValueEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid ObjectChangeActionValue", value)
+	return nil
+
+	// Commented out due to failure to keep this up to date with the OpenAPI spec
+	// See: https://github.com/netbox-community/go-netbox/issues/220
+	//enumTypeValue := ObjectChangeActionValue(value)
+	//for _, existing := range AllowedObjectChangeActionValueEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid ObjectChangeActionValue", value)
 }
 
 // NewObjectChangeActionValueFromValue returns a pointer to a valid ObjectChangeActionValue

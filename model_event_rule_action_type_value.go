@@ -38,15 +38,20 @@ func (v *EventRuleActionTypeValue) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := EventRuleActionTypeValue(value)
-	for _, existing := range AllowedEventRuleActionTypeValueEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid EventRuleActionTypeValue", value)
+	return nil
+
+	// Commented out due to failure to keep this up to date with the OpenAPI spec
+	// See: https://github.com/netbox-community/go-netbox/issues/220
+	//enumTypeValue := EventRuleActionTypeValue(value)
+	//for _, existing := range AllowedEventRuleActionTypeValueEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid EventRuleActionTypeValue", value)
 }
 
 // NewEventRuleActionTypeValueFromValue returns a pointer to a valid EventRuleActionTypeValue

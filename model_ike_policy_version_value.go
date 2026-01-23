@@ -36,15 +36,20 @@ func (v *IKEPolicyVersionValue) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := IKEPolicyVersionValue(value)
-	for _, existing := range AllowedIKEPolicyVersionValueEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid IKEPolicyVersionValue", value)
+	return nil
+
+	// Commented out due to failure to keep this up to date with the OpenAPI spec
+	// See: https://github.com/netbox-community/go-netbox/issues/220
+	//enumTypeValue := IKEPolicyVersionValue(value)
+	//for _, existing := range AllowedIKEPolicyVersionValueEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid IKEPolicyVersionValue", value)
 }
 
 // NewIKEPolicyVersionValueFromValue returns a pointer to a valid IKEPolicyVersionValue

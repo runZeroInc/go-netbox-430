@@ -42,15 +42,20 @@ func (v *CircuitDistanceUnitValue) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := CircuitDistanceUnitValue(value)
-	for _, existing := range AllowedCircuitDistanceUnitValueEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid CircuitDistanceUnitValue", value)
+	return nil
+
+	// Commented out due to failure to keep this up to date with the OpenAPI spec
+	// See: https://github.com/netbox-community/go-netbox/issues/220
+	//enumTypeValue := CircuitDistanceUnitValue(value)
+	//for _, existing := range AllowedCircuitDistanceUnitValueEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid CircuitDistanceUnitValue", value)
 }
 
 // NewCircuitDistanceUnitValueFromValue returns a pointer to a valid CircuitDistanceUnitValue

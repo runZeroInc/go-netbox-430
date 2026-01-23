@@ -38,15 +38,20 @@ func (v *DeviceTypeSubdeviceRoleValue) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := DeviceTypeSubdeviceRoleValue(value)
-	for _, existing := range AllowedDeviceTypeSubdeviceRoleValueEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid DeviceTypeSubdeviceRoleValue", value)
+	return nil
+
+	// Commented out due to failure to keep this up to date with the OpenAPI spec
+	// See: https://github.com/netbox-community/go-netbox/issues/220
+	//enumTypeValue := DeviceTypeSubdeviceRoleValue(value)
+	//for _, existing := range AllowedDeviceTypeSubdeviceRoleValueEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid DeviceTypeSubdeviceRoleValue", value)
 }
 
 // NewDeviceTypeSubdeviceRoleValueFromValue returns a pointer to a valid DeviceTypeSubdeviceRoleValue

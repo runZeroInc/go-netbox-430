@@ -36,15 +36,20 @@ func (v *RackUnitFaceValue) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := RackUnitFaceValue(value)
-	for _, existing := range AllowedRackUnitFaceValueEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid RackUnitFaceValue", value)
+	return nil
+
+	// Commented out due to failure to keep this up to date with the OpenAPI spec
+	// See: https://github.com/netbox-community/go-netbox/issues/220
+	//enumTypeValue := RackUnitFaceValue(value)
+	//for _, existing := range AllowedRackUnitFaceValueEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid RackUnitFaceValue", value)
 }
 
 // NewRackUnitFaceValueFromValue returns a pointer to a valid RackUnitFaceValue
