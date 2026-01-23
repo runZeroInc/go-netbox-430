@@ -44,15 +44,17 @@ func (v *BriefJobStatusLabel) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := BriefJobStatusLabel(value)
-	for _, existing := range AllowedBriefJobStatusLabelEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid BriefJobStatusLabel", value)
+	return nil
+	//enumTypeValue := BriefJobStatusLabel(value)
+	//for _, existing := range AllowedBriefJobStatusLabelEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid BriefJobStatusLabel", value)
 }
 
 // NewBriefJobStatusLabelFromValue returns a pointer to a valid BriefJobStatusLabel

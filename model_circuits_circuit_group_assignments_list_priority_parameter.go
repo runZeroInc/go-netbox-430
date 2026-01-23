@@ -40,15 +40,17 @@ func (v *CircuitsCircuitGroupAssignmentsListPriorityParameter) UnmarshalJSON(src
 	if err != nil {
 		return err
 	}
-	enumTypeValue := CircuitsCircuitGroupAssignmentsListPriorityParameter(value)
-	for _, existing := range AllowedCircuitsCircuitGroupAssignmentsListPriorityParameterEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid CircuitsCircuitGroupAssignmentsListPriorityParameter", value)
+	return nil
+	//enumTypeValue := CircuitsCircuitGroupAssignmentsListPriorityParameter(value)
+	//for _, existing := range AllowedCircuitsCircuitGroupAssignmentsListPriorityParameterEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid CircuitsCircuitGroupAssignmentsListPriorityParameter", value)
 }
 
 // NewCircuitsCircuitGroupAssignmentsListPriorityParameterFromValue returns a pointer to a valid CircuitsCircuitGroupAssignmentsListPriorityParameter

@@ -48,15 +48,17 @@ func (v *InterfacePoeTypeLabel) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := InterfacePoeTypeLabel(value)
-	for _, existing := range AllowedInterfacePoeTypeLabelEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid InterfacePoeTypeLabel", value)
+	return nil
+	//enumTypeValue := InterfacePoeTypeLabel(value)
+	//for _, existing := range AllowedInterfacePoeTypeLabelEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid InterfacePoeTypeLabel", value)
 }
 
 // NewInterfacePoeTypeLabelFromValue returns a pointer to a valid InterfacePoeTypeLabel

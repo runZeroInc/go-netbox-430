@@ -58,15 +58,17 @@ func (v *PatchedWritableCustomFieldRequestType) UnmarshalJSON(src []byte) error 
 	if err != nil {
 		return err
 	}
-	enumTypeValue := PatchedWritableCustomFieldRequestType(value)
-	for _, existing := range AllowedPatchedWritableCustomFieldRequestTypeEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid PatchedWritableCustomFieldRequestType", value)
+	return nil
+	//enumTypeValue := PatchedWritableCustomFieldRequestType(value)
+	//for _, existing := range AllowedPatchedWritableCustomFieldRequestTypeEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid PatchedWritableCustomFieldRequestType", value)
 }
 
 // NewPatchedWritableCustomFieldRequestTypeFromValue returns a pointer to a valid PatchedWritableCustomFieldRequestType

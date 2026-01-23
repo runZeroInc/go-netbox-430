@@ -46,15 +46,17 @@ func (v *VirtualMachineWithConfigContextStatusLabel) UnmarshalJSON(src []byte) e
 	if err != nil {
 		return err
 	}
-	enumTypeValue := VirtualMachineWithConfigContextStatusLabel(value)
-	for _, existing := range AllowedVirtualMachineWithConfigContextStatusLabelEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid VirtualMachineWithConfigContextStatusLabel", value)
+	return nil
+	//enumTypeValue := VirtualMachineWithConfigContextStatusLabel(value)
+	//for _, existing := range AllowedVirtualMachineWithConfigContextStatusLabelEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid VirtualMachineWithConfigContextStatusLabel", value)
 }
 
 // NewVirtualMachineWithConfigContextStatusLabelFromValue returns a pointer to a valid VirtualMachineWithConfigContextStatusLabel

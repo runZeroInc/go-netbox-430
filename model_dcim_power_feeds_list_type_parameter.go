@@ -36,15 +36,17 @@ func (v *DcimPowerFeedsListTypeParameter) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := DcimPowerFeedsListTypeParameter(value)
-	for _, existing := range AllowedDcimPowerFeedsListTypeParameterEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid DcimPowerFeedsListTypeParameter", value)
+	return nil
+	//enumTypeValue := DcimPowerFeedsListTypeParameter(value)
+	//for _, existing := range AllowedDcimPowerFeedsListTypeParameterEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid DcimPowerFeedsListTypeParameter", value)
 }
 
 // NewDcimPowerFeedsListTypeParameterFromValue returns a pointer to a valid DcimPowerFeedsListTypeParameter

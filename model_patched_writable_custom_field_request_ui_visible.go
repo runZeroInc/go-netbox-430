@@ -38,15 +38,17 @@ func (v *PatchedWritableCustomFieldRequestUiVisible) UnmarshalJSON(src []byte) e
 	if err != nil {
 		return err
 	}
-	enumTypeValue := PatchedWritableCustomFieldRequestUiVisible(value)
-	for _, existing := range AllowedPatchedWritableCustomFieldRequestUiVisibleEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid PatchedWritableCustomFieldRequestUiVisible", value)
+	return nil
+	//enumTypeValue := PatchedWritableCustomFieldRequestUiVisible(value)
+	//for _, existing := range AllowedPatchedWritableCustomFieldRequestUiVisibleEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid PatchedWritableCustomFieldRequestUiVisible", value)
 }
 
 // NewPatchedWritableCustomFieldRequestUiVisibleFromValue returns a pointer to a valid PatchedWritableCustomFieldRequestUiVisible

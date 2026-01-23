@@ -38,15 +38,17 @@ func (v *ExtrasCustomFieldChoiceSetsListBaseChoicesParameter) UnmarshalJSON(src 
 	if err != nil {
 		return err
 	}
-	enumTypeValue := ExtrasCustomFieldChoiceSetsListBaseChoicesParameter(value)
-	for _, existing := range AllowedExtrasCustomFieldChoiceSetsListBaseChoicesParameterEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid ExtrasCustomFieldChoiceSetsListBaseChoicesParameter", value)
+	return nil
+	//enumTypeValue := ExtrasCustomFieldChoiceSetsListBaseChoicesParameter(value)
+	//for _, existing := range AllowedExtrasCustomFieldChoiceSetsListBaseChoicesParameterEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid ExtrasCustomFieldChoiceSetsListBaseChoicesParameter", value)
 }
 
 // NewExtrasCustomFieldChoiceSetsListBaseChoicesParameterFromValue returns a pointer to a valid ExtrasCustomFieldChoiceSetsListBaseChoicesParameter

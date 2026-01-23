@@ -50,15 +50,17 @@ func (v *Encryption) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := Encryption(value)
-	for _, existing := range AllowedEncryptionEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid Encryption", value)
+	return nil
+	//enumTypeValue := Encryption(value)
+	//for _, existing := range AllowedEncryptionEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid Encryption", value)
 }
 
 // NewEncryptionFromValue returns a pointer to a valid Encryption

@@ -62,15 +62,17 @@ func (v *ExtrasCustomLinksListButtonClassParameter) UnmarshalJSON(src []byte) er
 	if err != nil {
 		return err
 	}
-	enumTypeValue := ExtrasCustomLinksListButtonClassParameter(value)
-	for _, existing := range AllowedExtrasCustomLinksListButtonClassParameterEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid ExtrasCustomLinksListButtonClassParameter", value)
+	return nil
+	//enumTypeValue := ExtrasCustomLinksListButtonClassParameter(value)
+	//for _, existing := range AllowedExtrasCustomLinksListButtonClassParameterEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid ExtrasCustomLinksListButtonClassParameter", value)
 }
 
 // NewExtrasCustomLinksListButtonClassParameterFromValue returns a pointer to a valid ExtrasCustomLinksListButtonClassParameter

@@ -38,15 +38,17 @@ func (v *PatchedWritableIPRangeRequestStatus) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := PatchedWritableIPRangeRequestStatus(value)
-	for _, existing := range AllowedPatchedWritableIPRangeRequestStatusEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid PatchedWritableIPRangeRequestStatus", value)
+	return nil
+	//enumTypeValue := PatchedWritableIPRangeRequestStatus(value)
+	//for _, existing := range AllowedPatchedWritableIPRangeRequestStatusEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid PatchedWritableIPRangeRequestStatus", value)
 }
 
 // NewPatchedWritableIPRangeRequestStatusFromValue returns a pointer to a valid PatchedWritableIPRangeRequestStatus

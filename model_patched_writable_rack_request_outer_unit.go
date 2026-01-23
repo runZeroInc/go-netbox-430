@@ -38,15 +38,17 @@ func (v *PatchedWritableRackRequestOuterUnit) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := PatchedWritableRackRequestOuterUnit(value)
-	for _, existing := range AllowedPatchedWritableRackRequestOuterUnitEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid PatchedWritableRackRequestOuterUnit", value)
+	return nil
+	//enumTypeValue := PatchedWritableRackRequestOuterUnit(value)
+	//for _, existing := range AllowedPatchedWritableRackRequestOuterUnitEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid PatchedWritableRackRequestOuterUnit", value)
 }
 
 // NewPatchedWritableRackRequestOuterUnitFromValue returns a pointer to a valid PatchedWritableRackRequestOuterUnit

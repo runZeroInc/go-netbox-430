@@ -36,15 +36,17 @@ func (v *ParentChildStatus) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := ParentChildStatus(value)
-	for _, existing := range AllowedParentChildStatusEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid ParentChildStatus", value)
+	return nil
+	//enumTypeValue := ParentChildStatus(value)
+	//for _, existing := range AllowedParentChildStatusEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid ParentChildStatus", value)
 }
 
 // NewParentChildStatusFromValue returns a pointer to a valid ParentChildStatus

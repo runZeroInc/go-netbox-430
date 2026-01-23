@@ -40,15 +40,17 @@ func (v *BriefCircuitGroupAssignmentSerializerPriorityLabel) UnmarshalJSON(src [
 	if err != nil {
 		return err
 	}
-	enumTypeValue := BriefCircuitGroupAssignmentSerializerPriorityLabel(value)
-	for _, existing := range AllowedBriefCircuitGroupAssignmentSerializerPriorityLabelEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid BriefCircuitGroupAssignmentSerializerPriorityLabel", value)
+	return nil
+	//enumTypeValue := BriefCircuitGroupAssignmentSerializerPriorityLabel(value)
+	//for _, existing := range AllowedBriefCircuitGroupAssignmentSerializerPriorityLabelEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid BriefCircuitGroupAssignmentSerializerPriorityLabel", value)
 }
 
 // NewBriefCircuitGroupAssignmentSerializerPriorityLabelFromValue returns a pointer to a valid BriefCircuitGroupAssignmentSerializerPriorityLabel

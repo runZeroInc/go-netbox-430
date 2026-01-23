@@ -38,15 +38,17 @@ func (v *PatchedWritableVLANRequestStatus) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := PatchedWritableVLANRequestStatus(value)
-	for _, existing := range AllowedPatchedWritableVLANRequestStatusEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid PatchedWritableVLANRequestStatus", value)
+	return nil
+	//enumTypeValue := PatchedWritableVLANRequestStatus(value)
+	//for _, existing := range AllowedPatchedWritableVLANRequestStatusEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid PatchedWritableVLANRequestStatus", value)
 }
 
 // NewPatchedWritableVLANRequestStatusFromValue returns a pointer to a valid PatchedWritableVLANRequestStatus

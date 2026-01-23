@@ -38,15 +38,17 @@ func (v *RackFace1) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := RackFace1(value)
-	for _, existing := range AllowedRackFace1EnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid RackFace1", value)
+	return nil
+	//enumTypeValue := RackFace1(value)
+	//for _, existing := range AllowedRackFace1EnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid RackFace1", value)
 }
 
 // NewRackFace1FromValue returns a pointer to a valid RackFace1

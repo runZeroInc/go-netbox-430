@@ -46,15 +46,17 @@ func (v *EventRuleEventTypesInner) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := EventRuleEventTypesInner(value)
-	for _, existing := range AllowedEventRuleEventTypesInnerEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid EventRuleEventTypesInner", value)
+	return nil
+	//enumTypeValue := EventRuleEventTypesInner(value)
+	//for _, existing := range AllowedEventRuleEventTypesInnerEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid EventRuleEventTypesInner", value)
 }
 
 // NewEventRuleEventTypesInnerFromValue returns a pointer to a valid EventRuleEventTypesInner

@@ -50,15 +50,17 @@ func (v *InterfaceTemplateRequestPoeType) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := InterfaceTemplateRequestPoeType(value)
-	for _, existing := range AllowedInterfaceTemplateRequestPoeTypeEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid InterfaceTemplateRequestPoeType", value)
+	return nil
+	//enumTypeValue := InterfaceTemplateRequestPoeType(value)
+	//for _, existing := range AllowedInterfaceTemplateRequestPoeTypeEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid InterfaceTemplateRequestPoeType", value)
 }
 
 // NewInterfaceTemplateRequestPoeTypeFromValue returns a pointer to a valid InterfaceTemplateRequestPoeType

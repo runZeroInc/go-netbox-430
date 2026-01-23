@@ -38,15 +38,17 @@ func (v *AuthenticationType) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := AuthenticationType(value)
-	for _, existing := range AllowedAuthenticationTypeEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid AuthenticationType", value)
+	return nil
+	//enumTypeValue := AuthenticationType(value)
+	//for _, existing := range AllowedAuthenticationTypeEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid AuthenticationType", value)
 }
 
 // NewAuthenticationTypeFromValue returns a pointer to a valid AuthenticationType

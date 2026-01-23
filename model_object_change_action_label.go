@@ -38,15 +38,17 @@ func (v *ObjectChangeActionLabel) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := ObjectChangeActionLabel(value)
-	for _, existing := range AllowedObjectChangeActionLabelEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid ObjectChangeActionLabel", value)
+	return nil
+	//enumTypeValue := ObjectChangeActionLabel(value)
+	//for _, existing := range AllowedObjectChangeActionLabelEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid ObjectChangeActionLabel", value)
 }
 
 // NewObjectChangeActionLabelFromValue returns a pointer to a valid ObjectChangeActionLabel

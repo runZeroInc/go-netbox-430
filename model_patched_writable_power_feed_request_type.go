@@ -36,15 +36,17 @@ func (v *PatchedWritablePowerFeedRequestType) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := PatchedWritablePowerFeedRequestType(value)
-	for _, existing := range AllowedPatchedWritablePowerFeedRequestTypeEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid PatchedWritablePowerFeedRequestType", value)
+	return nil
+	//enumTypeValue := PatchedWritablePowerFeedRequestType(value)
+	//for _, existing := range AllowedPatchedWritablePowerFeedRequestTypeEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid PatchedWritablePowerFeedRequestType", value)
 }
 
 // NewPatchedWritablePowerFeedRequestTypeFromValue returns a pointer to a valid PatchedWritablePowerFeedRequestType

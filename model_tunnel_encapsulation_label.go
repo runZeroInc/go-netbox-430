@@ -48,15 +48,17 @@ func (v *TunnelEncapsulationLabel) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := TunnelEncapsulationLabel(value)
-	for _, existing := range AllowedTunnelEncapsulationLabelEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid TunnelEncapsulationLabel", value)
+	return nil
+	//enumTypeValue := TunnelEncapsulationLabel(value)
+	//for _, existing := range AllowedTunnelEncapsulationLabelEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid TunnelEncapsulationLabel", value)
 }
 
 // NewTunnelEncapsulationLabelFromValue returns a pointer to a valid TunnelEncapsulationLabel

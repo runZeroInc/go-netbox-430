@@ -42,15 +42,17 @@ func (v *RackStatusLabel) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := RackStatusLabel(value)
-	for _, existing := range AllowedRackStatusLabelEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid RackStatusLabel", value)
+	return nil
+	//enumTypeValue := RackStatusLabel(value)
+	//for _, existing := range AllowedRackStatusLabelEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid RackStatusLabel", value)
 }
 
 // NewRackStatusLabelFromValue returns a pointer to a valid RackStatusLabel

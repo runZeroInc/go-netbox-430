@@ -36,15 +36,17 @@ func (v *IPSecProfileModeValue) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := IPSecProfileModeValue(value)
-	for _, existing := range AllowedIPSecProfileModeValueEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid IPSecProfileModeValue", value)
+	return nil
+	//enumTypeValue := IPSecProfileModeValue(value)
+	//for _, existing := range AllowedIPSecProfileModeValueEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid IPSecProfileModeValue", value)
 }
 
 // NewIPSecProfileModeValueFromValue returns a pointer to a valid IPSecProfileModeValue

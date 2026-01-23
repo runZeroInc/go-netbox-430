@@ -40,15 +40,17 @@ func (v *WirelessLANAuthTypeLabel) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := WirelessLANAuthTypeLabel(value)
-	for _, existing := range AllowedWirelessLANAuthTypeLabelEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid WirelessLANAuthTypeLabel", value)
+	return nil
+	//enumTypeValue := WirelessLANAuthTypeLabel(value)
+	//for _, existing := range AllowedWirelessLANAuthTypeLabelEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid WirelessLANAuthTypeLabel", value)
 }
 
 // NewWirelessLANAuthTypeLabelFromValue returns a pointer to a valid WirelessLANAuthTypeLabel

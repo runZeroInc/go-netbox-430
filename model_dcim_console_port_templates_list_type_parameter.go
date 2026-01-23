@@ -38,15 +38,17 @@ func (v *DcimConsolePortTemplatesListTypeParameter) UnmarshalJSON(src []byte) er
 	if err != nil {
 		return err
 	}
-	enumTypeValue := DcimConsolePortTemplatesListTypeParameter(value)
-	for _, existing := range AllowedDcimConsolePortTemplatesListTypeParameterEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid DcimConsolePortTemplatesListTypeParameter", value)
+	return nil
+	//enumTypeValue := DcimConsolePortTemplatesListTypeParameter(value)
+	//for _, existing := range AllowedDcimConsolePortTemplatesListTypeParameterEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid DcimConsolePortTemplatesListTypeParameter", value)
 }
 
 // NewDcimConsolePortTemplatesListTypeParameterFromValue returns a pointer to a valid DcimConsolePortTemplatesListTypeParameter

@@ -40,15 +40,17 @@ func (v *IKEProposalAuthenticationMethodLabel) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := IKEProposalAuthenticationMethodLabel(value)
-	for _, existing := range AllowedIKEProposalAuthenticationMethodLabelEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid IKEProposalAuthenticationMethodLabel", value)
+	return nil
+	//enumTypeValue := IKEProposalAuthenticationMethodLabel(value)
+	//for _, existing := range AllowedIKEProposalAuthenticationMethodLabelEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid IKEProposalAuthenticationMethodLabel", value)
 }
 
 // NewIKEProposalAuthenticationMethodLabelFromValue returns a pointer to a valid IKEProposalAuthenticationMethodLabel

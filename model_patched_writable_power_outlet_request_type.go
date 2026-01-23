@@ -230,15 +230,17 @@ func (v *PatchedWritablePowerOutletRequestType) UnmarshalJSON(src []byte) error 
 	if err != nil {
 		return err
 	}
-	enumTypeValue := PatchedWritablePowerOutletRequestType(value)
-	for _, existing := range AllowedPatchedWritablePowerOutletRequestTypeEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid PatchedWritablePowerOutletRequestType", value)
+	return nil
+	//enumTypeValue := PatchedWritablePowerOutletRequestType(value)
+	//for _, existing := range AllowedPatchedWritablePowerOutletRequestTypeEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid PatchedWritablePowerOutletRequestType", value)
 }
 
 // NewPatchedWritablePowerOutletRequestTypeFromValue returns a pointer to a valid PatchedWritablePowerOutletRequestType

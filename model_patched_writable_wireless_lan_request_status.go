@@ -40,15 +40,17 @@ func (v *PatchedWritableWirelessLANRequestStatus) UnmarshalJSON(src []byte) erro
 	if err != nil {
 		return err
 	}
-	enumTypeValue := PatchedWritableWirelessLANRequestStatus(value)
-	for _, existing := range AllowedPatchedWritableWirelessLANRequestStatusEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid PatchedWritableWirelessLANRequestStatus", value)
+	return nil
+	//enumTypeValue := PatchedWritableWirelessLANRequestStatus(value)
+	//for _, existing := range AllowedPatchedWritableWirelessLANRequestStatusEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid PatchedWritableWirelessLANRequestStatus", value)
 }
 
 // NewPatchedWritableWirelessLANRequestStatusFromValue returns a pointer to a valid PatchedWritableWirelessLANRequestStatus

@@ -50,15 +50,17 @@ func (v *PatchedWritableIPAddressRequestRole) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := PatchedWritableIPAddressRequestRole(value)
-	for _, existing := range AllowedPatchedWritableIPAddressRequestRoleEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid PatchedWritableIPAddressRequestRole", value)
+	return nil
+	//enumTypeValue := PatchedWritableIPAddressRequestRole(value)
+	//for _, existing := range AllowedPatchedWritableIPAddressRequestRoleEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid PatchedWritableIPAddressRequestRole", value)
 }
 
 // NewPatchedWritableIPAddressRequestRoleFromValue returns a pointer to a valid PatchedWritableIPAddressRequestRole

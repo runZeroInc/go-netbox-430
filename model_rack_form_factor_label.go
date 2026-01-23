@@ -46,15 +46,17 @@ func (v *RackFormFactorLabel) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := RackFormFactorLabel(value)
-	for _, existing := range AllowedRackFormFactorLabelEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid RackFormFactorLabel", value)
+	return nil
+	//enumTypeValue := RackFormFactorLabel(value)
+	//for _, existing := range AllowedRackFormFactorLabelEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid RackFormFactorLabel", value)
 }
 
 // NewRackFormFactorLabelFromValue returns a pointer to a valid RackFormFactorLabel

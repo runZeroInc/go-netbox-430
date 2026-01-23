@@ -44,15 +44,17 @@ func (v *Authentication) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := Authentication(value)
-	for _, existing := range AllowedAuthenticationEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid Authentication", value)
+	return nil
+	//enumTypeValue := Authentication(value)
+	//for _, existing := range AllowedAuthenticationEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid Authentication", value)
 }
 
 // NewAuthenticationFromValue returns a pointer to a valid Authentication

@@ -62,15 +62,17 @@ func (v *SchemaRetrieveLangParameter) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := SchemaRetrieveLangParameter(value)
-	for _, existing := range AllowedSchemaRetrieveLangParameterEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid SchemaRetrieveLangParameter", value)
+	return nil
+	//enumTypeValue := SchemaRetrieveLangParameter(value)
+	//for _, existing := range AllowedSchemaRetrieveLangParameterEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid SchemaRetrieveLangParameter", value)
 }
 
 // NewSchemaRetrieveLangParameterFromValue returns a pointer to a valid SchemaRetrieveLangParameter

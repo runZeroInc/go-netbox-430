@@ -44,15 +44,17 @@ func (v *DcimModuleTypesListAirflowParameter) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := DcimModuleTypesListAirflowParameter(value)
-	for _, existing := range AllowedDcimModuleTypesListAirflowParameterEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid DcimModuleTypesListAirflowParameter", value)
+	return nil
+	//enumTypeValue := DcimModuleTypesListAirflowParameter(value)
+	//for _, existing := range AllowedDcimModuleTypesListAirflowParameterEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid DcimModuleTypesListAirflowParameter", value)
 }
 
 // NewDcimModuleTypesListAirflowParameterFromValue returns a pointer to a valid DcimModuleTypesListAirflowParameter

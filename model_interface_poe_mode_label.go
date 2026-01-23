@@ -36,15 +36,17 @@ func (v *InterfacePoeModeLabel) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := InterfacePoeModeLabel(value)
-	for _, existing := range AllowedInterfacePoeModeLabelEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid InterfacePoeModeLabel", value)
+	return nil
+	//enumTypeValue := InterfacePoeModeLabel(value)
+	//for _, existing := range AllowedInterfacePoeModeLabelEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid InterfacePoeModeLabel", value)
 }
 
 // NewInterfacePoeModeLabelFromValue returns a pointer to a valid InterfacePoeModeLabel

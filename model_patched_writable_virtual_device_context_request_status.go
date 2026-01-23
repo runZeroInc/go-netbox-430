@@ -38,15 +38,17 @@ func (v *PatchedWritableVirtualDeviceContextRequestStatus) UnmarshalJSON(src []b
 	if err != nil {
 		return err
 	}
-	enumTypeValue := PatchedWritableVirtualDeviceContextRequestStatus(value)
-	for _, existing := range AllowedPatchedWritableVirtualDeviceContextRequestStatusEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid PatchedWritableVirtualDeviceContextRequestStatus", value)
+	return nil
+	//enumTypeValue := PatchedWritableVirtualDeviceContextRequestStatus(value)
+	//for _, existing := range AllowedPatchedWritableVirtualDeviceContextRequestStatusEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid PatchedWritableVirtualDeviceContextRequestStatus", value)
 }
 
 // NewPatchedWritableVirtualDeviceContextRequestStatusFromValue returns a pointer to a valid PatchedWritableVirtualDeviceContextRequestStatus

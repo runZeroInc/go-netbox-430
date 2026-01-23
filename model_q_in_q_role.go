@@ -38,15 +38,17 @@ func (v *QInQRole) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := QInQRole(value)
-	for _, existing := range AllowedQInQRoleEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid QInQRole", value)
+	return nil
+	//enumTypeValue := QInQRole(value)
+	//for _, existing := range AllowedQInQRoleEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid QInQRole", value)
 }
 
 // NewQInQRoleFromValue returns a pointer to a valid QInQRole

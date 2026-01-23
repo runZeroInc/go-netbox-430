@@ -36,15 +36,17 @@ func (v *PowerFeedPhaseLabel) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := PowerFeedPhaseLabel(value)
-	for _, existing := range AllowedPowerFeedPhaseLabelEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid PowerFeedPhaseLabel", value)
+	return nil
+	//enumTypeValue := PowerFeedPhaseLabel(value)
+	//for _, existing := range AllowedPowerFeedPhaseLabelEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid PowerFeedPhaseLabel", value)
 }
 
 // NewPowerFeedPhaseLabelFromValue returns a pointer to a valid PowerFeedPhaseLabel

@@ -56,15 +56,17 @@ func (v *DcimPowerOutletTemplatesListTypeParameter) UnmarshalJSON(src []byte) er
 	if err != nil {
 		return err
 	}
-	enumTypeValue := DcimPowerOutletTemplatesListTypeParameter(value)
-	for _, existing := range AllowedDcimPowerOutletTemplatesListTypeParameterEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid DcimPowerOutletTemplatesListTypeParameter", value)
+	return nil
+	//enumTypeValue := DcimPowerOutletTemplatesListTypeParameter(value)
+	//for _, existing := range AllowedDcimPowerOutletTemplatesListTypeParameterEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid DcimPowerOutletTemplatesListTypeParameter", value)
 }
 
 // NewDcimPowerOutletTemplatesListTypeParameterFromValue returns a pointer to a valid DcimPowerOutletTemplatesListTypeParameter

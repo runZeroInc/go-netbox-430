@@ -36,15 +36,17 @@ func (v *DcimRackTypesListOuterUnitParameter) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := DcimRackTypesListOuterUnitParameter(value)
-	for _, existing := range AllowedDcimRackTypesListOuterUnitParameterEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid DcimRackTypesListOuterUnitParameter", value)
+	return nil
+	//enumTypeValue := DcimRackTypesListOuterUnitParameter(value)
+	//for _, existing := range AllowedDcimRackTypesListOuterUnitParameterEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid DcimRackTypesListOuterUnitParameter", value)
 }
 
 // NewDcimRackTypesListOuterUnitParameterFromValue returns a pointer to a valid DcimRackTypesListOuterUnitParameter

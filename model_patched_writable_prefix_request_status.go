@@ -40,15 +40,17 @@ func (v *PatchedWritablePrefixRequestStatus) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := PatchedWritablePrefixRequestStatus(value)
-	for _, existing := range AllowedPatchedWritablePrefixRequestStatusEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid PatchedWritablePrefixRequestStatus", value)
+	return nil
+	//enumTypeValue := PatchedWritablePrefixRequestStatus(value)
+	//for _, existing := range AllowedPatchedWritablePrefixRequestStatusEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid PatchedWritablePrefixRequestStatus", value)
 }
 
 // NewPatchedWritablePrefixRequestStatusFromValue returns a pointer to a valid PatchedWritablePrefixRequestStatus

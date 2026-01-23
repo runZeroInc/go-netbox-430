@@ -42,15 +42,17 @@ func (v *DeviceTypeRequestWeightUnit) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := DeviceTypeRequestWeightUnit(value)
-	for _, existing := range AllowedDeviceTypeRequestWeightUnitEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid DeviceTypeRequestWeightUnit", value)
+	return nil
+	//enumTypeValue := DeviceTypeRequestWeightUnit(value)
+	//for _, existing := range AllowedDeviceTypeRequestWeightUnitEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid DeviceTypeRequestWeightUnit", value)
 }
 
 // NewDeviceTypeRequestWeightUnitFromValue returns a pointer to a valid DeviceTypeRequestWeightUnit
