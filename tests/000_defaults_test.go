@@ -3,12 +3,11 @@ package main
 import (
 	"context"
 	"io"
+	"math/rand"
 	"net/http"
 	"testing"
 
-	"math/rand"
-
-	"github.com/netbox-community/go-netbox/v4"
+	"github.com/runZeroInc/go-netbox-430"
 )
 
 const (

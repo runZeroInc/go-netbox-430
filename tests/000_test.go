@@ -4,7 +4,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/netbox-community/go-netbox/v4"
+	"github.com/runZeroInc/go-netbox-430"
 )
 
 func GetHarness(t *testing.T) *Harness {
