@@ -44,15 +44,17 @@ func (v *ModuleTypeAirflowLabel) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := ModuleTypeAirflowLabel(value)
-	for _, existing := range AllowedModuleTypeAirflowLabelEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid ModuleTypeAirflowLabel", value)
+	return nil
+	//enumTypeValue := ModuleTypeAirflowLabel(value)
+	//for _, existing := range AllowedModuleTypeAirflowLabelEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid ModuleTypeAirflowLabel", value)
 }
 
 // NewModuleTypeAirflowLabelFromValue returns a pointer to a valid ModuleTypeAirflowLabel

@@ -48,15 +48,17 @@ func (v *PatchedWritableRackRequestFormFactor) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := PatchedWritableRackRequestFormFactor(value)
-	for _, existing := range AllowedPatchedWritableRackRequestFormFactorEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid PatchedWritableRackRequestFormFactor", value)
+	return nil
+	//enumTypeValue := PatchedWritableRackRequestFormFactor(value)
+	//for _, existing := range AllowedPatchedWritableRackRequestFormFactorEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid PatchedWritableRackRequestFormFactor", value)
 }
 
 // NewPatchedWritableRackRequestFormFactorFromValue returns a pointer to a valid PatchedWritableRackRequestFormFactor

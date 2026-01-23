@@ -40,15 +40,17 @@ func (v *InterfaceRequestDuplex) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := InterfaceRequestDuplex(value)
-	for _, existing := range AllowedInterfaceRequestDuplexEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid InterfaceRequestDuplex", value)
+	return nil
+	//enumTypeValue := InterfaceRequestDuplex(value)
+	//for _, existing := range AllowedInterfaceRequestDuplexEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid InterfaceRequestDuplex", value)
 }
 
 // NewInterfaceRequestDuplexFromValue returns a pointer to a valid InterfaceRequestDuplex

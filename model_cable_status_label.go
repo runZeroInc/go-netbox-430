@@ -38,15 +38,17 @@ func (v *CableStatusLabel) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := CableStatusLabel(value)
-	for _, existing := range AllowedCableStatusLabelEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid CableStatusLabel", value)
+	return nil
+	//enumTypeValue := CableStatusLabel(value)
+	//for _, existing := range AllowedCableStatusLabelEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid CableStatusLabel", value)
 }
 
 // NewCableStatusLabelFromValue returns a pointer to a valid CableStatusLabel

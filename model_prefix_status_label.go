@@ -40,15 +40,17 @@ func (v *PrefixStatusLabel) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := PrefixStatusLabel(value)
-	for _, existing := range AllowedPrefixStatusLabelEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid PrefixStatusLabel", value)
+	return nil
+	//enumTypeValue := PrefixStatusLabel(value)
+	//for _, existing := range AllowedPrefixStatusLabelEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid PrefixStatusLabel", value)
 }
 
 // NewPrefixStatusLabelFromValue returns a pointer to a valid PrefixStatusLabel

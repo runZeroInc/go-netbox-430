@@ -48,15 +48,17 @@ func (v *PatchedWritableTunnelRequestEncapsulation) UnmarshalJSON(src []byte) er
 	if err != nil {
 		return err
 	}
-	enumTypeValue := PatchedWritableTunnelRequestEncapsulation(value)
-	for _, existing := range AllowedPatchedWritableTunnelRequestEncapsulationEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid PatchedWritableTunnelRequestEncapsulation", value)
+	return nil
+	//enumTypeValue := PatchedWritableTunnelRequestEncapsulation(value)
+	//for _, existing := range AllowedPatchedWritableTunnelRequestEncapsulationEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid PatchedWritableTunnelRequestEncapsulation", value)
 }
 
 // NewPatchedWritableTunnelRequestEncapsulationFromValue returns a pointer to a valid PatchedWritableTunnelRequestEncapsulation

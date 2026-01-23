@@ -36,15 +36,17 @@ func (v *AggregateFamilyLabel) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := AggregateFamilyLabel(value)
-	for _, existing := range AllowedAggregateFamilyLabelEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid AggregateFamilyLabel", value)
+	return nil
+	//enumTypeValue := AggregateFamilyLabel(value)
+	//for _, existing := range AllowedAggregateFamilyLabelEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid AggregateFamilyLabel", value)
 }
 
 // NewAggregateFamilyLabelFromValue returns a pointer to a valid AggregateFamilyLabel

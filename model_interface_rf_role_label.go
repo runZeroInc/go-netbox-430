@@ -36,15 +36,17 @@ func (v *InterfaceRfRoleLabel) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := InterfaceRfRoleLabel(value)
-	for _, existing := range AllowedInterfaceRfRoleLabelEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid InterfaceRfRoleLabel", value)
+	return nil
+	//enumTypeValue := InterfaceRfRoleLabel(value)
+	//for _, existing := range AllowedInterfaceRfRoleLabelEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid InterfaceRfRoleLabel", value)
 }
 
 // NewInterfaceRfRoleLabelFromValue returns a pointer to a valid InterfaceRfRoleLabel

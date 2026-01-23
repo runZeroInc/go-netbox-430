@@ -36,15 +36,17 @@ func (v *DeviceFaceLabel) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := DeviceFaceLabel(value)
-	for _, existing := range AllowedDeviceFaceLabelEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid DeviceFaceLabel", value)
+	return nil
+	//enumTypeValue := DeviceFaceLabel(value)
+	//for _, existing := range AllowedDeviceFaceLabelEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid DeviceFaceLabel", value)
 }
 
 // NewDeviceFaceLabelFromValue returns a pointer to a valid DeviceFaceLabel

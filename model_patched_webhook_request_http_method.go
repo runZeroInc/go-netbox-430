@@ -42,15 +42,17 @@ func (v *PatchedWebhookRequestHttpMethod) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := PatchedWebhookRequestHttpMethod(value)
-	for _, existing := range AllowedPatchedWebhookRequestHttpMethodEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid PatchedWebhookRequestHttpMethod", value)
+	return nil
+	//enumTypeValue := PatchedWebhookRequestHttpMethod(value)
+	//for _, existing := range AllowedPatchedWebhookRequestHttpMethodEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid PatchedWebhookRequestHttpMethod", value)
 }
 
 // NewPatchedWebhookRequestHttpMethodFromValue returns a pointer to a valid PatchedWebhookRequestHttpMethod

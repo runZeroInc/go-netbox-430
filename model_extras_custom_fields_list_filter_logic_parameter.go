@@ -38,15 +38,17 @@ func (v *ExtrasCustomFieldsListFilterLogicParameter) UnmarshalJSON(src []byte) e
 	if err != nil {
 		return err
 	}
-	enumTypeValue := ExtrasCustomFieldsListFilterLogicParameter(value)
-	for _, existing := range AllowedExtrasCustomFieldsListFilterLogicParameterEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid ExtrasCustomFieldsListFilterLogicParameter", value)
+	return nil
+	//enumTypeValue := ExtrasCustomFieldsListFilterLogicParameter(value)
+	//for _, existing := range AllowedExtrasCustomFieldsListFilterLogicParameterEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid ExtrasCustomFieldsListFilterLogicParameter", value)
 }
 
 // NewExtrasCustomFieldsListFilterLogicParameterFromValue returns a pointer to a valid ExtrasCustomFieldsListFilterLogicParameter

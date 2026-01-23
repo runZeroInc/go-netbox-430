@@ -38,15 +38,17 @@ func (v *ExtrasCustomFieldsListUiEditableParameter) UnmarshalJSON(src []byte) er
 	if err != nil {
 		return err
 	}
-	enumTypeValue := ExtrasCustomFieldsListUiEditableParameter(value)
-	for _, existing := range AllowedExtrasCustomFieldsListUiEditableParameterEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid ExtrasCustomFieldsListUiEditableParameter", value)
+	return nil
+	//enumTypeValue := ExtrasCustomFieldsListUiEditableParameter(value)
+	//for _, existing := range AllowedExtrasCustomFieldsListUiEditableParameterEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid ExtrasCustomFieldsListUiEditableParameter", value)
 }
 
 // NewExtrasCustomFieldsListUiEditableParameterFromValue returns a pointer to a valid ExtrasCustomFieldsListUiEditableParameter

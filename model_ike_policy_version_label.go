@@ -36,15 +36,17 @@ func (v *IKEPolicyVersionLabel) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := IKEPolicyVersionLabel(value)
-	for _, existing := range AllowedIKEPolicyVersionLabelEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid IKEPolicyVersionLabel", value)
+	return nil
+	//enumTypeValue := IKEPolicyVersionLabel(value)
+	//for _, existing := range AllowedIKEPolicyVersionLabelEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid IKEPolicyVersionLabel", value)
 }
 
 // NewIKEPolicyVersionLabelFromValue returns a pointer to a valid IKEPolicyVersionLabel

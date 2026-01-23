@@ -40,15 +40,17 @@ func (v *PowerOutletRequestFeedLeg) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := PowerOutletRequestFeedLeg(value)
-	for _, existing := range AllowedPowerOutletRequestFeedLegEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid PowerOutletRequestFeedLeg", value)
+	return nil
+	//enumTypeValue := PowerOutletRequestFeedLeg(value)
+	//for _, existing := range AllowedPowerOutletRequestFeedLegEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid PowerOutletRequestFeedLeg", value)
 }
 
 // NewPowerOutletRequestFeedLegFromValue returns a pointer to a valid PowerOutletRequestFeedLeg

@@ -44,15 +44,17 @@ func (v *PatchedWritableIKEProposalRequestAuthenticationAlgorithm) UnmarshalJSON
 	if err != nil {
 		return err
 	}
-	enumTypeValue := PatchedWritableIKEProposalRequestAuthenticationAlgorithm(value)
-	for _, existing := range AllowedPatchedWritableIKEProposalRequestAuthenticationAlgorithmEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid PatchedWritableIKEProposalRequestAuthenticationAlgorithm", value)
+	return nil
+	//enumTypeValue := PatchedWritableIKEProposalRequestAuthenticationAlgorithm(value)
+	//for _, existing := range AllowedPatchedWritableIKEProposalRequestAuthenticationAlgorithmEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid PatchedWritableIKEProposalRequestAuthenticationAlgorithm", value)
 }
 
 // NewPatchedWritableIKEProposalRequestAuthenticationAlgorithmFromValue returns a pointer to a valid PatchedWritableIKEProposalRequestAuthenticationAlgorithm

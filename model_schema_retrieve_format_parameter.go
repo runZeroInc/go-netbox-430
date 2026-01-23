@@ -36,15 +36,17 @@ func (v *SchemaRetrieveFormatParameter) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := SchemaRetrieveFormatParameter(value)
-	for _, existing := range AllowedSchemaRetrieveFormatParameterEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid SchemaRetrieveFormatParameter", value)
+	return nil
+	//enumTypeValue := SchemaRetrieveFormatParameter(value)
+	//for _, existing := range AllowedSchemaRetrieveFormatParameterEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid SchemaRetrieveFormatParameter", value)
 }
 
 // NewSchemaRetrieveFormatParameterFromValue returns a pointer to a valid SchemaRetrieveFormatParameter

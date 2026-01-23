@@ -46,15 +46,17 @@ func (v *DeviceStatusValue) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := DeviceStatusValue(value)
-	for _, existing := range AllowedDeviceStatusValueEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid DeviceStatusValue", value)
+	return nil
+	//enumTypeValue := DeviceStatusValue(value)
+	//for _, existing := range AllowedDeviceStatusValueEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid DeviceStatusValue", value)
 }
 
 // NewDeviceStatusValueFromValue returns a pointer to a valid DeviceStatusValue

@@ -42,15 +42,17 @@ func (v *ClusterStatusLabel) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := ClusterStatusLabel(value)
-	for _, existing := range AllowedClusterStatusLabelEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid ClusterStatusLabel", value)
+	return nil
+	//enumTypeValue := ClusterStatusLabel(value)
+	//for _, existing := range AllowedClusterStatusLabelEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid ClusterStatusLabel", value)
 }
 
 // NewClusterStatusLabelFromValue returns a pointer to a valid ClusterStatusLabel

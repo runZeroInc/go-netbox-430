@@ -426,15 +426,17 @@ func (v *InterfaceRfChannelLabel) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := InterfaceRfChannelLabel(value)
-	for _, existing := range AllowedInterfaceRfChannelLabelEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid InterfaceRfChannelLabel", value)
+	return nil
+	//enumTypeValue := InterfaceRfChannelLabel(value)
+	//for _, existing := range AllowedInterfaceRfChannelLabelEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid InterfaceRfChannelLabel", value)
 }
 
 // NewInterfaceRfChannelLabelFromValue returns a pointer to a valid InterfaceRfChannelLabel

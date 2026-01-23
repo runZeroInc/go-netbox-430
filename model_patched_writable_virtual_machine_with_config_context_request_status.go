@@ -46,15 +46,17 @@ func (v *PatchedWritableVirtualMachineWithConfigContextRequestStatus) UnmarshalJ
 	if err != nil {
 		return err
 	}
-	enumTypeValue := PatchedWritableVirtualMachineWithConfigContextRequestStatus(value)
-	for _, existing := range AllowedPatchedWritableVirtualMachineWithConfigContextRequestStatusEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid PatchedWritableVirtualMachineWithConfigContextRequestStatus", value)
+	return nil
+	//enumTypeValue := PatchedWritableVirtualMachineWithConfigContextRequestStatus(value)
+	//for _, existing := range AllowedPatchedWritableVirtualMachineWithConfigContextRequestStatusEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid PatchedWritableVirtualMachineWithConfigContextRequestStatus", value)
 }
 
 // NewPatchedWritableVirtualMachineWithConfigContextRequestStatusFromValue returns a pointer to a valid PatchedWritableVirtualMachineWithConfigContextRequestStatus

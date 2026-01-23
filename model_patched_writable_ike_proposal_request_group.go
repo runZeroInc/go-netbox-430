@@ -80,15 +80,17 @@ func (v *PatchedWritableIKEProposalRequestGroup) UnmarshalJSON(src []byte) error
 	if err != nil {
 		return err
 	}
-	enumTypeValue := PatchedWritableIKEProposalRequestGroup(value)
-	for _, existing := range AllowedPatchedWritableIKEProposalRequestGroupEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid PatchedWritableIKEProposalRequestGroup", value)
+	return nil
+	//enumTypeValue := PatchedWritableIKEProposalRequestGroup(value)
+	//for _, existing := range AllowedPatchedWritableIKEProposalRequestGroupEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid PatchedWritableIKEProposalRequestGroup", value)
 }
 
 // NewPatchedWritableIKEProposalRequestGroupFromValue returns a pointer to a valid PatchedWritableIKEProposalRequestGroup

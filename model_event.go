@@ -46,15 +46,17 @@ func (v *Event) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := Event(value)
-	for _, existing := range AllowedEventEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid Event", value)
+	return nil
+	//enumTypeValue := Event(value)
+	//for _, existing := range AllowedEventEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid Event", value)
 }
 
 // NewEventFromValue returns a pointer to a valid Event

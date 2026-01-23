@@ -38,15 +38,17 @@ func (v *L2VPNStatusValue) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := L2VPNStatusValue(value)
-	for _, existing := range AllowedL2VPNStatusValueEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid L2VPNStatusValue", value)
+	return nil
+	//enumTypeValue := L2VPNStatusValue(value)
+	//for _, existing := range AllowedL2VPNStatusValueEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid L2VPNStatusValue", value)
 }
 
 // NewL2VPNStatusValueFromValue returns a pointer to a valid L2VPNStatusValue

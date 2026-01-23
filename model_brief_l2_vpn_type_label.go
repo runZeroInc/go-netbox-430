@@ -60,15 +60,17 @@ func (v *BriefL2VPNTypeLabel) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := BriefL2VPNTypeLabel(value)
-	for _, existing := range AllowedBriefL2VPNTypeLabelEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid BriefL2VPNTypeLabel", value)
+	return nil
+	//enumTypeValue := BriefL2VPNTypeLabel(value)
+	//for _, existing := range AllowedBriefL2VPNTypeLabelEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid BriefL2VPNTypeLabel", value)
 }
 
 // NewBriefL2VPNTypeLabelFromValue returns a pointer to a valid BriefL2VPNTypeLabel

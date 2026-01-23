@@ -38,15 +38,17 @@ func (v *PatchedWritableCustomFieldRequestFilterLogic) UnmarshalJSON(src []byte)
 	if err != nil {
 		return err
 	}
-	enumTypeValue := PatchedWritableCustomFieldRequestFilterLogic(value)
-	for _, existing := range AllowedPatchedWritableCustomFieldRequestFilterLogicEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid PatchedWritableCustomFieldRequestFilterLogic", value)
+	return nil
+	//enumTypeValue := PatchedWritableCustomFieldRequestFilterLogic(value)
+	//for _, existing := range AllowedPatchedWritableCustomFieldRequestFilterLogicEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid PatchedWritableCustomFieldRequestFilterLogic", value)
 }
 
 // NewPatchedWritableCustomFieldRequestFilterLogicFromValue returns a pointer to a valid PatchedWritableCustomFieldRequestFilterLogic

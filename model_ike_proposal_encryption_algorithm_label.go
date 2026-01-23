@@ -48,15 +48,17 @@ func (v *IKEProposalEncryptionAlgorithmLabel) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := IKEProposalEncryptionAlgorithmLabel(value)
-	for _, existing := range AllowedIKEProposalEncryptionAlgorithmLabelEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid IKEProposalEncryptionAlgorithmLabel", value)
+	return nil
+	//enumTypeValue := IKEProposalEncryptionAlgorithmLabel(value)
+	//for _, existing := range AllowedIKEProposalEncryptionAlgorithmLabelEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid IKEProposalEncryptionAlgorithmLabel", value)
 }
 
 // NewIKEProposalEncryptionAlgorithmLabelFromValue returns a pointer to a valid IKEProposalEncryptionAlgorithmLabel

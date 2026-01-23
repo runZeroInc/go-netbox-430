@@ -42,15 +42,17 @@ func (v *IPAddressStatusLabel) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := IPAddressStatusLabel(value)
-	for _, existing := range AllowedIPAddressStatusLabelEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid IPAddressStatusLabel", value)
+	return nil
+	//enumTypeValue := IPAddressStatusLabel(value)
+	//for _, existing := range AllowedIPAddressStatusLabelEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid IPAddressStatusLabel", value)
 }
 
 // NewIPAddressStatusLabelFromValue returns a pointer to a valid IPAddressStatusLabel

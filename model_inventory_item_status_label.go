@@ -44,15 +44,17 @@ func (v *InventoryItemStatusLabel) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := InventoryItemStatusLabel(value)
-	for _, existing := range AllowedInventoryItemStatusLabelEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid InventoryItemStatusLabel", value)
+	return nil
+	//enumTypeValue := InventoryItemStatusLabel(value)
+	//for _, existing := range AllowedInventoryItemStatusLabelEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid InventoryItemStatusLabel", value)
 }
 
 // NewInventoryItemStatusLabelFromValue returns a pointer to a valid InventoryItemStatusLabel

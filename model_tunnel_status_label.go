@@ -38,15 +38,17 @@ func (v *TunnelStatusLabel) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := TunnelStatusLabel(value)
-	for _, existing := range AllowedTunnelStatusLabelEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid TunnelStatusLabel", value)
+	return nil
+	//enumTypeValue := TunnelStatusLabel(value)
+	//for _, existing := range AllowedTunnelStatusLabelEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid TunnelStatusLabel", value)
 }
 
 // NewTunnelStatusLabelFromValue returns a pointer to a valid TunnelStatusLabel

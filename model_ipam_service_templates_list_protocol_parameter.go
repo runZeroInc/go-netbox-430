@@ -38,15 +38,17 @@ func (v *IpamServiceTemplatesListProtocolParameter) UnmarshalJSON(src []byte) er
 	if err != nil {
 		return err
 	}
-	enumTypeValue := IpamServiceTemplatesListProtocolParameter(value)
-	for _, existing := range AllowedIpamServiceTemplatesListProtocolParameterEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid IpamServiceTemplatesListProtocolParameter", value)
+	return nil
+	//enumTypeValue := IpamServiceTemplatesListProtocolParameter(value)
+	//for _, existing := range AllowedIpamServiceTemplatesListProtocolParameterEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid IpamServiceTemplatesListProtocolParameter", value)
 }
 
 // NewIpamServiceTemplatesListProtocolParameterFromValue returns a pointer to a valid IpamServiceTemplatesListProtocolParameter

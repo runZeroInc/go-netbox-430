@@ -38,15 +38,17 @@ func (v *CustomFieldUiEditableLabel) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := CustomFieldUiEditableLabel(value)
-	for _, existing := range AllowedCustomFieldUiEditableLabelEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid CustomFieldUiEditableLabel", value)
+	return nil
+	//enumTypeValue := CustomFieldUiEditableLabel(value)
+	//for _, existing := range AllowedCustomFieldUiEditableLabelEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid CustomFieldUiEditableLabel", value)
 }
 
 // NewCustomFieldUiEditableLabelFromValue returns a pointer to a valid CustomFieldUiEditableLabel

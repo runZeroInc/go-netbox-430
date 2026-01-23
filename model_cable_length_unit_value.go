@@ -46,15 +46,17 @@ func (v *CableLengthUnitValue) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := CableLengthUnitValue(value)
-	for _, existing := range AllowedCableLengthUnitValueEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid CableLengthUnitValue", value)
+	return nil
+	//enumTypeValue := CableLengthUnitValue(value)
+	//for _, existing := range AllowedCableLengthUnitValueEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid CableLengthUnitValue", value)
 }
 
 // NewCableLengthUnitValueFromValue returns a pointer to a valid CableLengthUnitValue

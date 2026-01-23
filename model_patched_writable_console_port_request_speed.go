@@ -48,15 +48,17 @@ func (v *PatchedWritableConsolePortRequestSpeed) UnmarshalJSON(src []byte) error
 	if err != nil {
 		return err
 	}
-	enumTypeValue := PatchedWritableConsolePortRequestSpeed(value)
-	for _, existing := range AllowedPatchedWritableConsolePortRequestSpeedEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid PatchedWritableConsolePortRequestSpeed", value)
+	return nil
+	//enumTypeValue := PatchedWritableConsolePortRequestSpeed(value)
+	//for _, existing := range AllowedPatchedWritableConsolePortRequestSpeedEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid PatchedWritableConsolePortRequestSpeed", value)
 }
 
 // NewPatchedWritableConsolePortRequestSpeedFromValue returns a pointer to a valid PatchedWritableConsolePortRequestSpeed

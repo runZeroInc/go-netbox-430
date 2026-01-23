@@ -36,15 +36,17 @@ func (v *DcimRacksElevationRetrieveRenderParameter) UnmarshalJSON(src []byte) er
 	if err != nil {
 		return err
 	}
-	enumTypeValue := DcimRacksElevationRetrieveRenderParameter(value)
-	for _, existing := range AllowedDcimRacksElevationRetrieveRenderParameterEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid DcimRacksElevationRetrieveRenderParameter", value)
+	return nil
+	//enumTypeValue := DcimRacksElevationRetrieveRenderParameter(value)
+	//for _, existing := range AllowedDcimRacksElevationRetrieveRenderParameterEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid DcimRacksElevationRetrieveRenderParameter", value)
 }
 
 // NewDcimRacksElevationRetrieveRenderParameterFromValue returns a pointer to a valid DcimRacksElevationRetrieveRenderParameter

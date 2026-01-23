@@ -428,15 +428,17 @@ func (v *WirelessChannel) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := WirelessChannel(value)
-	for _, existing := range AllowedWirelessChannelEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid WirelessChannel", value)
+	return nil
+	//enumTypeValue := WirelessChannel(value)
+	//for _, existing := range AllowedWirelessChannelEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid WirelessChannel", value)
 }
 
 // NewWirelessChannelFromValue returns a pointer to a valid WirelessChannel

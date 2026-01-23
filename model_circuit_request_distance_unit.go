@@ -42,15 +42,17 @@ func (v *CircuitRequestDistanceUnit) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := CircuitRequestDistanceUnit(value)
-	for _, existing := range AllowedCircuitRequestDistanceUnitEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid CircuitRequestDistanceUnit", value)
+	return nil
+	//enumTypeValue := CircuitRequestDistanceUnit(value)
+	//for _, existing := range AllowedCircuitRequestDistanceUnitEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid CircuitRequestDistanceUnit", value)
 }
 
 // NewCircuitRequestDistanceUnitFromValue returns a pointer to a valid CircuitRequestDistanceUnit

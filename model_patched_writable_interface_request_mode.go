@@ -42,15 +42,17 @@ func (v *PatchedWritableInterfaceRequestMode) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := PatchedWritableInterfaceRequestMode(value)
-	for _, existing := range AllowedPatchedWritableInterfaceRequestModeEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid PatchedWritableInterfaceRequestMode", value)
+	return nil
+	//enumTypeValue := PatchedWritableInterfaceRequestMode(value)
+	//for _, existing := range AllowedPatchedWritableInterfaceRequestModeEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid PatchedWritableInterfaceRequestMode", value)
 }
 
 // NewPatchedWritableInterfaceRequestModeFromValue returns a pointer to a valid PatchedWritableInterfaceRequestMode

@@ -40,15 +40,17 @@ func (v *CircuitsCircuitsListDistanceUnitParameter) UnmarshalJSON(src []byte) er
 	if err != nil {
 		return err
 	}
-	enumTypeValue := CircuitsCircuitsListDistanceUnitParameter(value)
-	for _, existing := range AllowedCircuitsCircuitsListDistanceUnitParameterEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid CircuitsCircuitsListDistanceUnitParameter", value)
+	return nil
+	//enumTypeValue := CircuitsCircuitsListDistanceUnitParameter(value)
+	//for _, existing := range AllowedCircuitsCircuitsListDistanceUnitParameterEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid CircuitsCircuitsListDistanceUnitParameter", value)
 }
 
 // NewCircuitsCircuitsListDistanceUnitParameterFromValue returns a pointer to a valid CircuitsCircuitsListDistanceUnitParameter

@@ -42,15 +42,17 @@ func (v *DataSourceStatusValue) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := DataSourceStatusValue(value)
-	for _, existing := range AllowedDataSourceStatusValueEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid DataSourceStatusValue", value)
+	return nil
+	//enumTypeValue := DataSourceStatusValue(value)
+	//for _, existing := range AllowedDataSourceStatusValueEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid DataSourceStatusValue", value)
 }
 
 // NewDataSourceStatusValueFromValue returns a pointer to a valid DataSourceStatusValue
