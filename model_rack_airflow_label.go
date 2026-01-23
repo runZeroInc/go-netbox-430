@@ -36,15 +36,19 @@ func (v *RackAirflowLabel) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := RackAirflowLabel(value)
-	for _, existing := range AllowedRackAirflowLabelEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid RackAirflowLabel", value)
+	return nil
+	// Commented out due to failure to keep this up to date with the OpenAPI spec
+	// See: https://github.com/netbox-community/go-netbox/issues/220
+	//enumTypeValue := RackAirflowLabel(value)
+	//for _, existing := range AllowedRackAirflowLabelEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid RackAirflowLabel", value)
 }
 
 // NewRackAirflowLabelFromValue returns a pointer to a valid RackAirflowLabel

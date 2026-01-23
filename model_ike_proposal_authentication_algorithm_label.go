@@ -42,15 +42,19 @@ func (v *IKEProposalAuthenticationAlgorithmLabel) UnmarshalJSON(src []byte) erro
 	if err != nil {
 		return err
 	}
-	enumTypeValue := IKEProposalAuthenticationAlgorithmLabel(value)
-	for _, existing := range AllowedIKEProposalAuthenticationAlgorithmLabelEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid IKEProposalAuthenticationAlgorithmLabel", value)
+	return nil
+	// Commented out due to failure to keep this up to date with the OpenAPI spec
+	// See: https://github.com/netbox-community/go-netbox/issues/220
+	//enumTypeValue := IKEProposalAuthenticationAlgorithmLabel(value)
+	//for _, existing := range AllowedIKEProposalAuthenticationAlgorithmLabelEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid IKEProposalAuthenticationAlgorithmLabel", value)
 }
 
 // NewIKEProposalAuthenticationAlgorithmLabelFromValue returns a pointer to a valid IKEProposalAuthenticationAlgorithmLabel

@@ -48,15 +48,19 @@ func (v *ConsolePortSpeedLabel) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := ConsolePortSpeedLabel(value)
-	for _, existing := range AllowedConsolePortSpeedLabelEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid ConsolePortSpeedLabel", value)
+	return nil
+	// Commented out due to failure to keep this up to date with the OpenAPI spec
+	// See: https://github.com/netbox-community/go-netbox/issues/220
+	//enumTypeValue := ConsolePortSpeedLabel(value)
+	//for _, existing := range AllowedConsolePortSpeedLabelEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid ConsolePortSpeedLabel", value)
 }
 
 // NewConsolePortSpeedLabelFromValue returns a pointer to a valid ConsolePortSpeedLabel

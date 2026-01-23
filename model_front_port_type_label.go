@@ -148,15 +148,19 @@ func (v *FrontPortTypeLabel) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := FrontPortTypeLabel(value)
-	for _, existing := range AllowedFrontPortTypeLabelEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid FrontPortTypeLabel", value)
+	return nil
+	// Commented out due to failure to keep this up to date with the OpenAPI spec
+	// See: https://github.com/netbox-community/go-netbox/issues/220
+	//enumTypeValue := FrontPortTypeLabel(value)
+	//for _, existing := range AllowedFrontPortTypeLabelEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid FrontPortTypeLabel", value)
 }
 
 // NewFrontPortTypeLabelFromValue returns a pointer to a valid FrontPortTypeLabel

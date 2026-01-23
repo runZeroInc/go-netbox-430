@@ -36,15 +36,19 @@ func (v *DcimDevicesRenderConfigCreateFormatParameter) UnmarshalJSON(src []byte)
 	if err != nil {
 		return err
 	}
-	enumTypeValue := DcimDevicesRenderConfigCreateFormatParameter(value)
-	for _, existing := range AllowedDcimDevicesRenderConfigCreateFormatParameterEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid DcimDevicesRenderConfigCreateFormatParameter", value)
+	return nil
+	// Commented out due to failure to keep this up to date with the OpenAPI spec
+	// See: https://github.com/netbox-community/go-netbox/issues/220
+	//enumTypeValue := DcimDevicesRenderConfigCreateFormatParameter(value)
+	//for _, existing := range AllowedDcimDevicesRenderConfigCreateFormatParameterEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid DcimDevicesRenderConfigCreateFormatParameter", value)
 }
 
 // NewDcimDevicesRenderConfigCreateFormatParameterFromValue returns a pointer to a valid DcimDevicesRenderConfigCreateFormatParameter

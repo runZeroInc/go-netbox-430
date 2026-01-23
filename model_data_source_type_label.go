@@ -40,15 +40,19 @@ func (v *DataSourceTypeLabel) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := DataSourceTypeLabel(value)
-	for _, existing := range AllowedDataSourceTypeLabelEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid DataSourceTypeLabel", value)
+	return nil
+	// Commented out due to failure to keep this up to date with the OpenAPI spec
+	// See: https://github.com/netbox-community/go-netbox/issues/220
+	//enumTypeValue := DataSourceTypeLabel(value)
+	//for _, existing := range AllowedDataSourceTypeLabelEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid DataSourceTypeLabel", value)
 }
 
 // NewDataSourceTypeLabelFromValue returns a pointer to a valid DataSourceTypeLabel

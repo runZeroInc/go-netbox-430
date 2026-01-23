@@ -42,15 +42,19 @@ func (v *PatchedWritableIPAddressRequestStatus) UnmarshalJSON(src []byte) error 
 	if err != nil {
 		return err
 	}
-	enumTypeValue := PatchedWritableIPAddressRequestStatus(value)
-	for _, existing := range AllowedPatchedWritableIPAddressRequestStatusEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid PatchedWritableIPAddressRequestStatus", value)
+	return nil
+	// Commented out due to failure to keep this up to date with the OpenAPI spec
+	// See: https://github.com/netbox-community/go-netbox/issues/220
+	//enumTypeValue := PatchedWritableIPAddressRequestStatus(value)
+	//for _, existing := range AllowedPatchedWritableIPAddressRequestStatusEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid PatchedWritableIPAddressRequestStatus", value)
 }
 
 // NewPatchedWritableIPAddressRequestStatusFromValue returns a pointer to a valid PatchedWritableIPAddressRequestStatus

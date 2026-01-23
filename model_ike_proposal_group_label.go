@@ -80,15 +80,19 @@ func (v *IKEProposalGroupLabel) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := IKEProposalGroupLabel(value)
-	for _, existing := range AllowedIKEProposalGroupLabelEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid IKEProposalGroupLabel", value)
+	return nil
+	// Commented out due to failure to keep this up to date with the OpenAPI spec
+	// See: https://github.com/netbox-community/go-netbox/issues/220
+	//enumTypeValue := IKEProposalGroupLabel(value)
+	//for _, existing := range AllowedIKEProposalGroupLabelEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid IKEProposalGroupLabel", value)
 }
 
 // NewIKEProposalGroupLabelFromValue returns a pointer to a valid IKEProposalGroupLabel

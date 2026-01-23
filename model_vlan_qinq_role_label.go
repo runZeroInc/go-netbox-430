@@ -36,15 +36,19 @@ func (v *VLANQinqRoleLabel) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := VLANQinqRoleLabel(value)
-	for _, existing := range AllowedVLANQinqRoleLabelEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid VLANQinqRoleLabel", value)
+	return nil
+	// Commented out due to failure to keep this up to date with the OpenAPI spec
+	// See: https://github.com/netbox-community/go-netbox/issues/220
+	//enumTypeValue := VLANQinqRoleLabel(value)
+	//for _, existing := range AllowedVLANQinqRoleLabelEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid VLANQinqRoleLabel", value)
 }
 
 // NewVLANQinqRoleLabelFromValue returns a pointer to a valid VLANQinqRoleLabel

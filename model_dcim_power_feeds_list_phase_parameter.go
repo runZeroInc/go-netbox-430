@@ -36,15 +36,19 @@ func (v *DcimPowerFeedsListPhaseParameter) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := DcimPowerFeedsListPhaseParameter(value)
-	for _, existing := range AllowedDcimPowerFeedsListPhaseParameterEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid DcimPowerFeedsListPhaseParameter", value)
+	return nil
+	// Commented out due to failure to keep this up to date with the OpenAPI spec
+	// See: https://github.com/netbox-community/go-netbox/issues/220
+	//enumTypeValue := DcimPowerFeedsListPhaseParameter(value)
+	//for _, existing := range AllowedDcimPowerFeedsListPhaseParameterEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid DcimPowerFeedsListPhaseParameter", value)
 }
 
 // NewDcimPowerFeedsListPhaseParameterFromValue returns a pointer to a valid DcimPowerFeedsListPhaseParameter

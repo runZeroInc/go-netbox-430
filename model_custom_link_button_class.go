@@ -62,15 +62,19 @@ func (v *CustomLinkButtonClass) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := CustomLinkButtonClass(value)
-	for _, existing := range AllowedCustomLinkButtonClassEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid CustomLinkButtonClass", value)
+	return nil
+	// Commented out due to failure to keep this up to date with the OpenAPI spec
+	// See: https://github.com/netbox-community/go-netbox/issues/220
+	//enumTypeValue := CustomLinkButtonClass(value)
+	//for _, existing := range AllowedCustomLinkButtonClassEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid CustomLinkButtonClass", value)
 }
 
 // NewCustomLinkButtonClassFromValue returns a pointer to a valid CustomLinkButtonClass

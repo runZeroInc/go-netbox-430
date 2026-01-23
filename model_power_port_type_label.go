@@ -240,15 +240,19 @@ func (v *PowerPortTypeLabel) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := PowerPortTypeLabel(value)
-	for _, existing := range AllowedPowerPortTypeLabelEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid PowerPortTypeLabel", value)
+	return nil
+	// Commented out due to failure to keep this up to date with the OpenAPI spec
+	// See: https://github.com/netbox-community/go-netbox/issues/220
+	//enumTypeValue := PowerPortTypeLabel(value)
+	//for _, existing := range AllowedPowerPortTypeLabelEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid PowerPortTypeLabel", value)
 }
 
 // NewPowerPortTypeLabelFromValue returns a pointer to a valid PowerPortTypeLabel

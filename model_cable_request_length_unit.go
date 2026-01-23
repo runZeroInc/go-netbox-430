@@ -46,15 +46,19 @@ func (v *CableRequestLengthUnit) UnmarshalJSON(src []byte) error {
 	if err != nil {
 		return err
 	}
-	enumTypeValue := CableRequestLengthUnit(value)
-	for _, existing := range AllowedCableRequestLengthUnitEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid CableRequestLengthUnit", value)
+	return nil
+	// Commented out due to failure to keep this up to date with the OpenAPI spec
+	// See: https://github.com/netbox-community/go-netbox/issues/220
+	//enumTypeValue := CableRequestLengthUnit(value)
+	//for _, existing := range AllowedCableRequestLengthUnitEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid CableRequestLengthUnit", value)
 }
 
 // NewCableRequestLengthUnitFromValue returns a pointer to a valid CableRequestLengthUnit

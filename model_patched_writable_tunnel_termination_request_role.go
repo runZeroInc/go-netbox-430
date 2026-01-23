@@ -38,15 +38,19 @@ func (v *PatchedWritableTunnelTerminationRequestRole) UnmarshalJSON(src []byte) 
 	if err != nil {
 		return err
 	}
-	enumTypeValue := PatchedWritableTunnelTerminationRequestRole(value)
-	for _, existing := range AllowedPatchedWritableTunnelTerminationRequestRoleEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
 
-	return fmt.Errorf("%+v is not a valid PatchedWritableTunnelTerminationRequestRole", value)
+	return nil
+	// Commented out due to failure to keep this up to date with the OpenAPI spec
+	// See: https://github.com/netbox-community/go-netbox/issues/220
+	//enumTypeValue := PatchedWritableTunnelTerminationRequestRole(value)
+	//for _, existing := range AllowedPatchedWritableTunnelTerminationRequestRoleEnumValues {
+	//	if existing == enumTypeValue {
+	//		*v = enumTypeValue
+	//		return nil
+	//	}
+	//}
+	//
+	//return fmt.Errorf("%+v is not a valid PatchedWritableTunnelTerminationRequestRole", value)
 }
 
 // NewPatchedWritableTunnelTerminationRequestRoleFromValue returns a pointer to a valid PatchedWritableTunnelTerminationRequestRole
