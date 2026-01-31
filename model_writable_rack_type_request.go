@@ -847,7 +847,6 @@ func (o *WritableRackTypeRequest) UnmarshalJSON(data []byte) (err error) {
 	requiredProperties := []string{
 		"manufacturer",
 		"model",
-		"slug",
 		"form_factor",
 	}
 

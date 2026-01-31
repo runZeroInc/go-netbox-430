@@ -720,7 +720,6 @@ func (o *VLANGroup) UnmarshalJSON(data []byte) (err error) {
 		"url",
 		"display",
 		"name",
-		"slug",
 		"utilization",
 	}
 

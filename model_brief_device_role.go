@@ -339,7 +339,6 @@ func (o *BriefDeviceRole) UnmarshalJSON(data []byte) (err error) {
 		"url",
 		"display",
 		"name",
-		"slug",
 		"_depth",
 	}
 

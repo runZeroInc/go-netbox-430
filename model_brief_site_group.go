@@ -303,7 +303,6 @@ func (o *BriefSiteGroup) UnmarshalJSON(data []byte) (err error) {
 		"url",
 		"display",
 		"name",
-		"slug",
 		"_depth",
 	}
 

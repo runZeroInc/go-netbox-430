@@ -589,7 +589,6 @@ func (o *ContactGroup) UnmarshalJSON(data []byte) (err error) {
 		"url",
 		"display",
 		"name",
-		"slug",
 		"_depth",
 	}
 

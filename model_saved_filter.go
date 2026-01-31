@@ -585,7 +585,6 @@ func (o *SavedFilter) UnmarshalJSON(data []byte) (err error) {
 		"display",
 		"object_types",
 		"name",
-		"slug",
 		"parameters",
 	}
 

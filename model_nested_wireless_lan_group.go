@@ -267,7 +267,6 @@ func (o *NestedWirelessLANGroup) UnmarshalJSON(data []byte) (err error) {
 		"url",
 		"display",
 		"name",
-		"slug",
 		"_depth",
 	}
 

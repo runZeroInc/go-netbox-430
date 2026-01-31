@@ -304,7 +304,6 @@ func (o *BriefDeviceType) UnmarshalJSON(data []byte) (err error) {
 		"display",
 		"manufacturer",
 		"model",
-		"slug",
 	}
 
 	// defaultValueFuncMap captures the default values for required properties.

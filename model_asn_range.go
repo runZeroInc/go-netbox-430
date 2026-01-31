@@ -607,7 +607,6 @@ func (o *ASNRange) UnmarshalJSON(data []byte) (err error) {
 		"url",
 		"display",
 		"name",
-		"slug",
 		"rir",
 		"start",
 		"end",
@@ -620,7 +619,6 @@ func (o *ASNRange) UnmarshalJSON(data []byte) (err error) {
 	allProperties := make(map[string]interface{})
 
 	err = json.Unmarshal(data, &allProperties)
-
 	if err != nil {
 		return err
 	}
@@ -646,7 +644,6 @@ func (o *ASNRange) UnmarshalJSON(data []byte) (err error) {
 	varASNRange := _ASNRange{}
 
 	err = json.Unmarshal(data, &varASNRange)
-
 	if err != nil {
 		return err
 	}

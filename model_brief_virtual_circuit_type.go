@@ -267,7 +267,6 @@ func (o *BriefVirtualCircuitType) UnmarshalJSON(data []byte) (err error) {
 		"url",
 		"display",
 		"name",
-		"slug",
 		"virtual_circuit_count",
 	}
 
