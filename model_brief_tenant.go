@@ -240,7 +240,6 @@ func (o *BriefTenant) UnmarshalJSON(data []byte) (err error) {
 		"url",
 		"display",
 		"name",
-		"slug",
 	}
 
 	// defaultValueFuncMap captures the default values for required properties.

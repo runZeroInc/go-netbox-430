@@ -808,7 +808,6 @@ func (o *Location) UnmarshalJSON(data []byte) (err error) {
 		"url",
 		"display",
 		"name",
-		"slug",
 		"site",
 		"_depth",
 	}

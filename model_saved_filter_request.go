@@ -370,7 +370,6 @@ func (o *SavedFilterRequest) UnmarshalJSON(data []byte) (err error) {
 	requiredProperties := []string{
 		"object_types",
 		"name",
-		"slug",
 		"parameters",
 	}
 

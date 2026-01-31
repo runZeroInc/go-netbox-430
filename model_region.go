@@ -625,7 +625,6 @@ func (o *Region) UnmarshalJSON(data []byte) (err error) {
 		"url",
 		"display",
 		"name",
-		"slug",
 		"_depth",
 	}
 

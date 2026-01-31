@@ -184,7 +184,6 @@ func (o *BriefDeviceTypeRequest) UnmarshalJSON(data []byte) (err error) {
 	requiredProperties := []string{
 		"manufacturer",
 		"model",
-		"slug",
 	}
 
 	// defaultValueFuncMap captures the default values for required properties.

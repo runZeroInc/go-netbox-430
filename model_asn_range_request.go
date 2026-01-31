@@ -356,7 +356,6 @@ func (o *ASNRangeRequest) UnmarshalJSON(data []byte) (err error) {
 	// that every required field exists as a key in the generic map.
 	requiredProperties := []string{
 		"name",
-		"slug",
 		"rir",
 		"start",
 		"end",
@@ -369,7 +368,6 @@ func (o *ASNRangeRequest) UnmarshalJSON(data []byte) (err error) {
 	allProperties := make(map[string]interface{})
 
 	err = json.Unmarshal(data, &allProperties)
-
 	if err != nil {
 		return err
 	}
@@ -395,7 +393,6 @@ func (o *ASNRangeRequest) UnmarshalJSON(data []byte) (err error) {
 	varASNRangeRequest := _ASNRangeRequest{}
 
 	err = json.Unmarshal(data, &varASNRangeRequest)
-
 	if err != nil {
 		return err
 	}

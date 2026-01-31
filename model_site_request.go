@@ -732,7 +732,6 @@ func (o *SiteRequest) UnmarshalJSON(data []byte) (err error) {
 	// that every required field exists as a key in the generic map.
 	requiredProperties := []string{
 		"name",
-		"slug",
 	}
 
 	// defaultValueFuncMap captures the default values for required properties.
