@@ -809,7 +809,6 @@ func (o *Location) UnmarshalJSON(data []byte) (err error) {
 		"display",
 		"name",
 		"site",
-		"_depth",
 	}
 
 	// defaultValueFuncMap captures the default values for required properties.

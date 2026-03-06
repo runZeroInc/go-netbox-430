@@ -964,7 +964,6 @@ func (o *Prefix) UnmarshalJSON(data []byte) (err error) {
 		"family",
 		"prefix",
 		"children",
-		"_depth",
 	}
 
 	// defaultValueFuncMap captures the default values for required properties.
