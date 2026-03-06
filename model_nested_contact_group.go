@@ -267,7 +267,6 @@ func (o *NestedContactGroup) UnmarshalJSON(data []byte) (err error) {
 		"url",
 		"display",
 		"name",
-		"_depth",
 	}
 
 	// defaultValueFuncMap captures the default values for required properties.

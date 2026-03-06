@@ -974,7 +974,6 @@ func (o *InventoryItem) UnmarshalJSON(data []byte) (err error) {
 		"display",
 		"device",
 		"name",
-		"_depth",
 	}
 
 	// defaultValueFuncMap captures the default values for required properties.
